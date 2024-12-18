@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juan Ruiz Chanta - Especialista SST</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .about {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #f9f9f9;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin: 2rem 0;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .about-text {
+            flex: 2;
+            text-align: justify;
+            padding-right: 2rem;
+        }
+        .about-text h3 {
+            font-size: 1.8rem;
+            color: #005682;
+            margin-bottom: 1rem;
+        }
+        .about-text p {
+            font-size: 1rem;
+            color: #333;
+            line-height: 1.6;
+        }
+        .about-image {
+            flex: 0.5;
+            display: flex;
+            justify-content: center;
+        }
+        .about-image img {
+            width: 150px;
+            height: 200px;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+        .services {
+            text-align: center;
+            background-color: #f9f9f9;
+            padding: 2rem 1rem;
+        }
+        .services h3 {
+            font-size: 1.8rem;
+            color: #005682;
+            margin-bottom: 1.5rem;
+        }
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        .service-item {
+            background: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 1rem;
+            text-align: center;
+        }
+        .service-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+        .service-item h4 {
+            color: #005682;
+            margin-bottom: 0.5rem;
+        }
+        .contact {
+            background-color: #005682;
+            color: #fff;
+            padding: 2rem 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+        }
+        .contact h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        .contact-form {
+            flex: 1;
+            max-width: 600px;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 1rem;
+            margin: 0.8rem 0;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        .contact-form button {
+            background-color: #fff;
+            color: #005682;
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.3s;
+            display: block;
+            margin: 0 auto;
+        }
+        .contact-form button:hover {
+            background-color: #ddd;
+            color: #003354;
+        }
+        .contact-right {
+            flex: 1;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .contact-right p {
+            font-size: 1.2rem;
+            font-style: italic;
+            margin-bottom: 1.5rem;
+        }
+        .contact-right button {
+            background-color: #fff;
+            color: #005682;
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 1rem;
+            transition: 0.3s;
+        }
+        .contact-right button:hover {
+            background-color: #ddd;
+            color: #003354;
+        }
+        .contact-right .social-links {
+            margin-top: 1.5rem;
+        }
+        .contact-right .social-links a {
+            color: #fff;
+            font-size: 1.2rem;
+            margin: 0 0.5rem;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .contact-right .social-links a:hover {
+            color: #ddd;
+        }
+        .gallery {
+            text-align: center;
+            background-color: #f9f9f9;
+            padding: 2rem 1rem;
+        }
+        .gallery h3 {
+            font-size: 1.8rem;
+            color: #005682;
+            margin-bottom: 1.5rem;
+        }
+        .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            object-fit: cover;
+        }
+    </style>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo-container">
+            <img src="logo.png" alt="Logo" class="logo">
+        </div>
+        <div class="header-content">
+            <h1>Juan Ruiz Chanta</h1>
+            <h2>Especialista en Seguridad y Salud en el Trabajo</h2>
+            <p>Consultoría | Auditorías | Capacitación | Homologación de Proveedores | Implementacion SIG | Outsourcing</p>
+        </div>
+    </header>
+    
+
+    <!-- Sobre Mí -->
+    <section class="about">
+        <div class="about-text">
+            <h3>Sobre Mí</h3>
+            <p>Soy Ingeniero Industrial con más de 10 años de experiencia en la implementación de Sistemas Integrados de Gestión, auditorías y homologación de proveedores, alineados a los requerimientos del cliente, a los estándares internacionales como la ISO 45001, ISO 9001, ISO 14001 y la legislación nacional vigente. He liderado proyectos en sectores como minería, construcción, industrias, retail, entre otros, especializándome en la planificación estratégica de la SST a nivel gerencial, técnico y operativo, asegurando que la gestión sea holística y sistemática para la detección y prevención de riesgos laborales en toda la organización.</p>
+        </div>
+        <div class="about-image">
+            <img src="about.jpg" alt="Juan Ruiz Chanta en capacitación">
+        </div>
+    </section>
+
+    <!-- Servicios Profesionales -->
+    <section class="services">
+        <h3>Servicios Profesionales</h3>
+        <div class="service-grid">
+            <div class="service-item">
+                <img src="capacitacion.jpg" alt="Capacitacion">
+                <h4>Capacitaciones y Entrenamientos</h4>
+                <p>Diseñamos e implementamos programas de capacitación, integrando metodologías innovadoras como capacitaciones gamificadas y entrenamientos personalizados. Nos especializamos en entrenamientos para trabajos de alto riesgo, alineados a normativas vigentes y requerimientos específicos de SUNAFIL, así como en capacitaciones por puestos de trabajo que fortalecen las competencias del personal.</p>
+            </div>
+            <div class="service-item">
+                <img src="auditoria.jpg" alt="Auditorías">
+                <h4>Inspecciones y Auditorías</h4>
+                <p>Ofrecemos auditorías internas y externas, enfocadas en detectar oportunidades de mejora y asegurar la conformidad. Desarrollamos auditorías de Sistemas Integrados de Gestión (SIG) y auditorías específicas alineadas a los requerimientos de MINTRA y otras entidades regulatorias. Nuestro enfoque preciso y metodológico permite fortalecer la cultura de seguridad y garantizar la excelencia operativa.</p>
+            </div>
+            <div class="service-item">
+                <img src="sig.jpg" alt="Implementación SIG">
+                <h4>Implementación SIG / Homologación</h4>
+                <p>Ofrecemos servicios especializados en la implementación de Sistemas Integrados de Gestión (SIG), alineados a normas internacionales como ISO 9001, ISO 14001, ISO 45001 y a la legislación nacional vigente. Realizamos procesos de homologación de proveedores, asegurando el cumplimiento de los requerimientos específicos de cada cliente y las normativas aplicables.</p>
+            </div>
+            <div class="service-item">
+                <img src="outsourcing.jpg" alt="Outsourcing">
+                <h4>Outsourcing</h4>
+                <p>Brindamos externalización de procesos de Seguridad y Salud en el Trabajo (SST) para optimizar recursos y garantizar resultados efectivos. Nos encargamos de la administración del sistema de gestión, el monitoreo del cumplimiento normativo, la implementación y mantenimiento de sistemas de gestión, el seguimiento de indicadores de seguridad y la capacitación del personal, asegurando el cumplimiento de estándares legales y operativos. </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galería de Trabajo -->
+    <section class="gallery">
+        <h3>Galería de Trabajo</h3>
+        <div class="gallery-container">
+            <img src="gallery1.jpg" alt="Trabajo en campo">
+            <img src="gallery2.jpg" alt="Reunión de trabajo">
+            <img src="gallery3.jpg" alt="Capacitación">
+            <img src="gallery4.jpg" alt="Inspección">
+        </div>
+    </section>
+
+<!-- Contact Section -->
+<section class="contact-container">
+    <!-- Contact Box -->
+    <div class="contact-box">
+        <h3>CONTACTO</h3>
+        <form>
+            <input type="text" placeholder="Nombre" required>
+            <input type="email" placeholder="Correo Electrónico" required>
+            <textarea placeholder="Mensaje" rows="5" required></textarea>
+            <button type="submit">Enviar Mensaje</button>
+        </form>
+    </div>
+
+    <!-- Quote Box -->
+    <div class="quote-box">
+        <h4>¡RECUERDA!:</h4>
+        <p>"No hay progreso sin seguridad: la prevención no limita, potencia"</p>
+        <a href="https://wa.me/51933171490" target="_blank" class="whatsapp-button">Agendar una reunión</a>
+        <div class="social-links">
+            <p class="descubre-texto">Descubre más sobre mi perfil profesional en:</p>
+            <a href="https://www.linkedin.com/in/juan-ruiz-chanta-b7802980/" target="_blank">LinkedIn</a>
+            |
+            <a href="https://www.youtube.com/@accionpreventivahqseoficial" target="_blank">YouTube</a>
+            <p class="email-container"><span class="normal-text">Email:</span> <span class="email">jruizchanta@gmail.com</span></p>
+
+
+
+        </div>
+    </div>
+</section>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Juan Ruiz Chanta</p>
+    </footer>
+</body>
+</html>
+

@@ -1,0 +1,398 @@
+/* General */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    color: #333;
+    line-height: 1.6;
+    background-color: #005682;
+}
+
+/* Header */
+header {
+    background: #005682;
+    color: #fff;
+    padding: 2rem;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 0.5rem;
+    font-size: 2.5rem;
+}
+
+header p {
+    font-size: 1.2rem;
+}
+
+/* Servicios Profesionales */
+.services {
+    text-align: center;
+    background-color: #f9f9f9;
+    padding: 2rem 1rem;
+}
+
+.services h3 {
+    font-size: 1.8rem;
+    color: #005682;
+    margin-bottom: 1.5rem;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.service-item {
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Agregamos transiciones */
+}
+
+.service-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.service-item:hover {
+    transform: scale(1.05); /* Efecto de zoom al pasar el mouse */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+}
+
+.service-item h4 {
+    color: #005682;
+    margin-bottom: 0.5rem;
+}
+
+/* Zoom Effect for Images in Gallery */
+.gallery-container img {
+    width: 100%;
+    max-width: 400px;
+    margin: 0.5rem;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-container img:hover {
+    transform: scale(1.1); /* Zoom para imágenes de la galería */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Contact Section */
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 2rem;
+    padding: 2rem;
+    flex-wrap: wrap;
+}
+
+.contact-box, .quote-box {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    min-height: 400px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-box:hover, .quote-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.contact-box h3 {
+    color: #005682;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.contact-box form input,
+.contact-box form textarea {
+    width: 100%;
+    padding: 1rem;
+    margin: 0.8rem 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+.contact-box form button {
+    background-color: #005682;
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.contact-box form button:hover {
+    background-color: #003354;
+}
+
+.quote-box h4 {
+    color: #005682;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.quote-box p {
+    font-style: italic;
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+/* Botón de reunión con efecto de palpitación */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(0, 86, 130, 0.7);
+    }
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 0 10px 10px rgba(0, 86, 130, 0.1);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(0, 86, 130, 0);
+    }
+}
+
+.quote-box button {
+    background-color: #005682;
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+    animation: pulse 2s infinite;
+    margin-bottom: 1.5rem; /* Espacio adicional debajo del botón */
+}
+
+.quote-box button:hover {
+    background-color: #003354;
+}
+
+/* Descubre más sobre nosotros */
+.quote-box p.social-text {
+    margin-top: 1rem;
+    font-style: normal;
+    color: #333;
+    font-weight: bold;
+    text-decoration: none; /* Quitar subrayado */
+}
+
+.quote-box a {
+    text-decoration: none; /* Quitar subrayado de los enlaces */
+    color: #005682;
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+header {
+    position: relative;
+    background: #005682;
+    color: #fff;
+    display: flex; /* Flexbox para manejar la alineación */
+    align-items: center; /* Centra verticalmente el logo y el texto */
+    justify-content: center; /* Centra el texto horizontalmente */
+    padding: 1rem 2rem;
+}
+
+.logo-container {
+    position: absolute; /* Posiciona el logo de forma independiente */
+    top: 55%; /* Centra verticalmente */
+    left: 20px; /* Alinea el logo a la izquierda */
+    transform: translateY(-45%); /* Ajusta el centrado vertical exacto */
+}
+
+.logo {
+    width: 250px; /* Tamaño fijo del logo */
+    height: auto;
+}
+
+.header-content {
+    text-align: center; /* Centra el texto */
+    flex: 1; /* Ocupa todo el espacio restante */
+}
+.normal-text {
+    font-style: normal; /* Quita la cursiva al texto "Email:" */
+}
+
+.descubre-texto {
+    margin-top: 1.5rem; /* Espacio adicional arriba del texto */
+    font-style: normal !important; /* Fuerza la letra sin cursiva */
+}
+
+
+.email {
+    font-style: normal; /* Quita la cursiva al correo */
+}
+.quote-box p.normal-text {
+    font-style: normal; /* Elimina la cursiva solo de esta clase */
+}
+
+
+.email-container {
+    margin-top: 1rem; /* Agrega espacio encima del correo */
+}
+
+.social-links p {
+    margin-bottom: 2rem; /* Espacio entre "Descubre más..." y los links */
+}
+/* Estilos base del botón */
+.whatsapp-button {
+    display: inline-block;
+    background-color: #005682;
+    color: #fff !important;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 0.8rem;
+    text-align: center;
+    text-decoration: none;
+    transition: background 0.3s ease;
+    animation: pulse 1.5s infinite; /* Aplica la animación */
+}
+
+/* Efecto de hover */
+.whatsapp-button:hover {
+    background-color: #003354;
+}
+
+/* Definición de la animación */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(0, 86, 130, 0.7);
+    }
+    50% {
+        transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+        box-shadow: 0 0 10px 10px rgba(0, 86, 130, 0);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(0, 86, 130, 0);
+    }
+}
+@media (max-width: 768px) {
+    .about {
+        flex-direction: column; /* Los elementos se apilan verticalmente */
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .about-text {
+        padding-right: 0; /* Elimina el padding derecho */
+    }
+
+    .about-image {
+        margin-top: 1rem; /* Añade espacio entre el texto y la imagen */
+    }
+
+    .about-image img {
+        width: 120px; /* Reduce tamaño de la imagen */
+        height: auto;
+    }
+
+
+    .logo {
+        width: 150px; /* Reduce el tamaño del logo */
+    }
+
+    .header-content h1 {
+        font-size: 1.8rem; /* Ajusta tamaño del título */
+    }
+
+    .header-content h2, header p {
+        font-size: 1rem; /* Reduce tamaño de subtítulos */
+    }
+}
+@media (max-width: 768px) {
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+        text-align: center;
+    }
+
+    .logo-container {
+        position: static; /* Elimina el posicionamiento absoluto */
+        transform: none;
+        margin-bottom: 1rem; /* Espacio debajo del logo */
+    }
+
+    .logo {
+        width: 120px; /* Ajusta el tamaño del logo */
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .header-content {
+        margin-top: 0; /* Elimina espacio innecesario arriba */
+    }
+}
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra todos los elementos horizontalmente */
+    text-align: center;
+    padding: 1rem;
+}
+
+.logo-container {
+    margin-bottom: 1rem; /* Espacio entre el logo y el texto */
+}
+
+.logo {
+    width: 200px; /* Ajusta el tamaño del logo */
+    height: auto;
+}
+
+.header-content h1 {
+    margin-top: 0; /* Elimina espacio adicional arriba del título */
+}
+
+
+
+
+
+
+
+
+
+
+
+
